@@ -1,0 +1,15 @@
+ALGORITHM tri-par-insertion
+VAR
+    t : array-of integer [10];
+    i,j,cle : INTEGER;
+BEGIN
+    FOR i FROM 0 TO t.length-1 STEP 1  DO
+        cle := t[i];
+        j := i-1;
+        WHILE ((j>=0) AND (t[j]> cle)) DO
+            t[j+1] := t[j];
+            j :=j-1;
+        END_WHILE
+        t [j+1] = cle
+    END_FOR
+END
